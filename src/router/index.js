@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/Index'
 import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
+import ForgetPassword from '@/components/ForgetPassword'
 
 Vue.use(Router)
 
@@ -19,6 +20,11 @@ const router = new Router({
       path: '/sign-up',
       name: 'Sign Up',
       component: SignUp
+    },
+    {
+      path: '/forget-password',
+      name: 'Forget Password',
+      component: ForgetPassword,
     },
     { 
       path: '/hello',

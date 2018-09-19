@@ -1,6 +1,6 @@
 import axios from 'axios'
 import router from '../../router/index'
-import { getHeader, getUser, userAccountURL, loginURL,userURL, userProfileURL} from '../../config'
+import { getHeader, getUser, userAccountURL, loginURL,userURL, userProfileURL, userPasswordReset} from '../../config'
 
 const state = {
     user: 'Hay'
@@ -68,6 +68,16 @@ const actions = {
         window.localStorage.removeItem('authUser')
         router.push({ path: '/login' })
     }
+  },
+  reset: ({commit}, payload) => {
+    axios.post(userPasswordReset,{
+      email: payload
+    }).then((res)=>{
+      console.log('Success Reset Password')
+      router.push({path: '/login'})
+    }, (err)=> {
+      console.log('Reset Password Failed')
+    })
   }
 }
 const mutations = {

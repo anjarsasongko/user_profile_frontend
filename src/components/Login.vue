@@ -9,6 +9,7 @@
                 <input type="password" placeholder="Password" v-model="login.password"><br>
                 <button class="btn btn-primary" @click="loginProccess">Login</button>
                 <p>Have you been here before? Create your account <router-link :to="{ path: '/sign-up'}" replace>here</router-link>.</p>
+                <p><router-link :to="{ path: '/forget-password'}" replace>Forget Password?</router-link>.</p>
             </div>
         </div>
     </div>

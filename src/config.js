@@ -18,6 +18,7 @@ const getHeader =  function () {
   const userProfileURL = apiDomain + '/user/profile'
 
   const userAccountURL = apiDomain + '/user-account/sign-up'
+  const userPasswordReset = apiDomain + '/user-account/forget'
 
   export {
     getHeader,
@@ -26,6 +27,7 @@ const getHeader =  function () {
     loginURL,
     userAccountURL,
     userURL,
-    userProfileURL
+    userProfileURL,
+    userPasswordReset
   }
   
